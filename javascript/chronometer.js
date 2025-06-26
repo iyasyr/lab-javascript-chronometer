@@ -7,7 +7,7 @@ class Chronometer {
   }
 
   start(callback) {
-    // Milliseconds interval (10ms per step, 0-99)
+    // Milliseconds interval (10ms)
     this.millisecIntervalId = setInterval(() => {
       this.currentMilliseconds++;
       if (this.currentMilliseconds >= 100) {
@@ -29,7 +29,7 @@ class Chronometer {
   }
 
   getSeconds() {
-    return Math.floor(this.currentTime) % 60; // 1 second = 100 * 10ms
+    return Math.floor(this.currentTime) % 60;
   }
 
   getMilliseconds() {
